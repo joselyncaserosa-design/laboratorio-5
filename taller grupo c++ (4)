@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int N;
+    cout << "Ingrese un numero: ";
+    cin >> N;
+
+    cout << "\nTabla de multiplicar de " << N << ":\n";
+    for (int i = 1; i <= 10; i++) { // for para la tabla
+        cout << N << " x " << i << " = " << N * i << endl;
+    }
+
+    int suma = 0;
+    int i = 1;
+
+    while (i <= N) {
+        suma += i;       
+        i++;
+    }
+
+    cout << "\nSuma desde 1 hasta " << N << ": " << suma << endl;
+
+    bool primo = true;
+
+    if (N <= 1) {
+        primo = false;
+    } else {
+        for (int j = 2; j < N; j++) { // verificamos divisores
+            if (N % j == 0) {
+                primo = false;
+                break; 
+            }
+        }
+    }
+
+    if (primo)
+        cout << N << " es primo.\n";
+    else
+        cout << N << " no es primo.\n";
+
+    return 0;
+}
