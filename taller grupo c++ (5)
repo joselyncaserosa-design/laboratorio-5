@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+void areaCirculo(double radio) {
+    double area = 3.1416 * radio * radio;
+    cout << "Area del circulo: " << area << endl;
+}
+
+void factorial(int n) {
+    long long fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    cout << "Factorial: " << fact << endl;
+}
+
+void parImpar(int n) {
+    if (n % 2 == 0)
+        cout << "El numero es PAR\n";
+    else
+        cout << "El numero es IMPAR\n";
+}
+
+int main() {
+
+    int opcion;
+    
+    cout << "MENU\n";
+    cout << "1. Area de un circulo\n";
+    cout << "2. Factorial\n";
+    cout << "3. Par o Impar\n";
+    cout << "Seleccione una opcion: ";
+    cin >> opcion;
+
+    if (opcion == 1) {
+        double r;
+        cout << "Ingrese el radio: ";
+        cin >> r;
+        areaCirculo(r);
+    }
+    else if (opcion == 2) {
+        int n;
+        cout << "Ingrese un numero: ";
+        cin >> n;
+        factorial(n);
+    }
+    else if (opcion == 3) {
+        int n;
+        cout << "Ingrese un numero: ";
+        cin >> n;
+        parImpar(n);
+    }
+    else {
+        cout << "Opcion no valida\n";
+    }
+
+    return 0;
+}
